@@ -86,7 +86,6 @@ const App = () => {
             </NavigationContainer>
         </>
     );
->>>>>>> main
 };
 
 // const styles = StyleSheet.create({
