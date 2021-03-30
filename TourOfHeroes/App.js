@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
+import type { Node } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,7 +26,48 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
+import database from '@react-native-firebase/database';
+
+// Reading data from Firebase
+const fetchDataFromFirebase = ( userId ) =>
+  database()
+    .ref(`/users/${ userId }`)
+    .once('value')
+    .then(snapshot => {
+      console.log('User data: ', snapshot.val());
+    });
+
+// Add user to Firebase
+const addUserToFirebase = ( userId ) =>
+  database()
+    .ref('/users/')
+    .update({
+      userId: {
+        "paths": {}
+    }})
+    .then(() => console.log(`User: ${userId} as been created. `));
+
+// Updating data to Firebase
+const addPathToFirebase = ( userId, index, lat, long, story ) =>
+  database()
+    .ref(`/users/${userId}/paths/`)
+    .update({
+      index: {
+        "lat": lat,
+        "long": long,
+        "story": story
+      }
+    })
+    .then(() => console.log(`Path of: ${userId} as been created. `));
+
+// Remove user from Firebase
+const removeUserFromFirebase = ( userId ) =>
+database()
+  .ref(`/users/${userId}`)
+  .remove()
+  .then(console.log(`user: ${userId} removed .`));
+
+const Section = ({ children, title }): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>

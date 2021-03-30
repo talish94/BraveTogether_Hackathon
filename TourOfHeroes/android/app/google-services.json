@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "476471145319",
+    "project_id": "tour-of-heroes-501ca",
+    "storage_bucket": "tour-of-heroes-501ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476471145319:android:85927f2f43c69de74e75c2",
+        "android_client_info": {
+          "package_name": "com.tourofheroes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476471145319-k16vq6ltf3g3s9gd3877hnab2a54m2aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOnrY6Zr_4IwTNBc4HPB4RkzWyQADr95w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476471145319-k16vq6ltf3g3s9gd3877hnab2a54m2aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
