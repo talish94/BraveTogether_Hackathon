@@ -24,7 +24,12 @@ const list = [
 ];
 
 export default class Header extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
+    const foundUser = data.stories.find(story => story.storyId == this.props.storyId);
     return (
       <View style={styles.header}>
         <View style={{marginLeft: 110, backgroundColor: 'blue'}}>
@@ -32,14 +37,14 @@ export default class Header extends React.Component {
             <ListItem bottomDivider>
               <ListItem.Content>
                 <ListItem.Title style={{fontSize: 18}}>
-                  {data.profileProperties.first_name}{' '}
-                  {data.profileProperties.last_name}
+                  {foundUser.profileProperties.first_name}{' '}
+                  {foundUser.profileProperties.last_name}
                 </ListItem.Title>
                 <ListItem.Subtitle style={{fontSize: 14}}>
-                  Birth at: {data.profileProperties.place_of_birth}
+                  Birth at: {foundUser.profileProperties.place_of_birth}
                 </ListItem.Subtitle>
                 <ListItem.Subtitle style={{fontSize: 14}}>
-                  Age: {data.profileProperties.age}
+                  Age: {foundUser.profileProperties.age}
                 </ListItem.Subtitle>
               </ListItem.Content>
             </ListItem>
@@ -53,8 +58,6 @@ export default class Header extends React.Component {
           }}
         />
       </View>
-
-      //    </View>
     );
   }
 }

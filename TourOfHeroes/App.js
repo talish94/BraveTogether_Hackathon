@@ -11,7 +11,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import database from '@react-native-firebase/database';
+// import database from '@react-native-firebase/database';
 import HomeScreen from './src/Components/home';
 import Stories from './src/Components/stories';
 import Profile from './src/Components/profile';
@@ -54,6 +54,7 @@ import Profile from './src/Components/profile';
 //   .ref(`/users/${userId}`)
 //   .remove()
 //   .then(console.log(`user: ${userId} removed .`));
+
 const StoriesStack = createStackNavigator();
 
 function StoriesStackScreen() {
@@ -84,7 +85,7 @@ const App = () => {
                         }}
                     />
                     <Tab.Screen
-                        name="Stories"
+                        name="StoriesStackScreen"
                         component={StoriesStackScreen}
                         options={{
                             tabBarLabel: 'Stories',

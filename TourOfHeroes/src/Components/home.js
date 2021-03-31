@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import Marker from 'react-native-maps';
 import { Searchbar } from 'react-native-paper';
 const axios = require('axios').default;
 import base64 from 'react-native-base64';
@@ -8,7 +9,7 @@ import logoImage from '../assets/images/logo.jpg';
 import getToken from '../auth/auth';
 const logoImageUri = Image.resolveAssetSource(logoImage).uri
 
-const HomeScreen  = () => {
+const HomeScreen  = ({ navigation }) => {
 
     const [searchQuery, setSearchQuery] = useState('');
     // const [token, setToken] = useState('');
@@ -51,15 +52,68 @@ const HomeScreen  = () => {
                 onIconPress={handleKeyDown}
             />
             <MapView
-                provider={PROVIDER_GOOGLE}
-                style={styles.map}
-                region={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121,
+            provider={PROVIDER_GOOGLE}
+            style={styles.map}
+            region={{
+            latitude: 51.1021648529282,
+            longitude: 11.489313321999326,
+            latitudeDelta: 1.5,
+            longitudeDelta: 0.2,
+            }}>
+            <Marker
+                coordinate={{
+                latitude: 51.1021648529282,
+                longitude: 11.489313321999326,
                 }}
-            >
+                pinColor={'purple'} // any color
+                title={'0'}
+                description={'description'}
+            />
+            <Marker
+                coordinate={{
+                latitude: 51.58369063298165,
+                longitude: 11.589313321999326,
+                }}
+                pinColor={'purple'} // any color
+                title={'2'}
+                description={'description'}
+            />
+            <Marker
+                coordinate={{
+                latitude: 51.1021678529282,
+                longitude: 10.534998032329677,
+                }}
+                pinColor={'purple'} // any color
+                title={'3'}
+                description={'description'}
+            />
+            <Marker
+                coordinate={{
+                latitude: 51.3341678529282,
+                longitude: 10.514998032329677,
+                }}
+                pinColor={'purple'} // any color
+                title={'4'}
+                description={'description'}
+            />
+            <Marker
+                coordinate={{
+                latitude: 51.1721678529282,
+                longitude: 11.234998032329677,
+                }}
+                pinColor={'purple'} // any color
+                title={'5'}
+                description={'description'}
+            />
+            <Marker
+                coordinate={{
+                latitude: 50.6721678529282,
+                longitude: 10.234998032329677,
+                }}
+                pinColor={'purple'} // any color
+                title={'5'}
+                description={'description'}
+            />
             </MapView>
         </View>
     )

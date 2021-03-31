@@ -4,12 +4,15 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 import logoImage from '../assets/images/logo.jpg';
 import getToken from '../auth/auth';
 import base64 from 'react-native-base64';
+import { useNavigation } from '@react-navigation/native';
+
 const axios = require('axios').default;
 const logoImageUri = Image.resolveAssetSource(logoImage).uri
 
 
-const Stories  = ({ navigation }) => {
+const Stories  = () => {
 
+    const navigation = useNavigation();
     const [token, setToken] = useState('');
     const [storiesList, setStoriesList] = useState([]);
 
@@ -21,7 +24,6 @@ const Stories  = ({ navigation }) => {
                     "Authorization": "Basic " + base64.encode(tokenResponse + ":"),
                 },
             });
-            // console.log(response.data);
             setStoriesList(response.data);
         };
 
@@ -36,9 +38,12 @@ const Stories  = ({ navigation }) => {
                 style={styles.logo}
                 source={{uri: logoImageUri}}
              />
-            {
+            {                                                                           
                 storiesList.map((l, i) => (
-                <ListItem key={i} bottomDivider onPress={() => navigation.navigate('Profile')}>
+                <ListItem key={i} bottomDivider onPress={() => {navigation.navigate('StoriesStackScreen', {
+                    screen: 'Profile',
+                    params: { story: l },
+                  })}}>
                     <ListItem.Content>
                     <ListItem.Title>{l.title}</ListItem.Title>
                     {/* <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle> */}
