@@ -1,6 +1,13 @@
 {
   "users": {
     "6fefa07b-5d26-466e-8242-a1038da77043": {
+      "storyId": "7fefa07b-5d26-466e-8242-a1038da77043",
+      "profileProperties": {
+        "first_name": "moshe",
+        "last_name": "peretz",
+        "age": "30",
+        "place_of_birth": "Israel"
+      },
       "paths": {
         "0": {
           "lat": "51.1031648529282",
@@ -25,6 +32,13 @@
       }
     },
     "6defa07b-5d26-466e-8242-a1038da766": {
+      "storyId": "7fefa07b-5d26-466e-8242-a1038da77043",
+      "profileProperties": {
+        "first_name": "moshe",
+        "last_name": "peretz",
+        "age": "30",
+        "place_of_birth": "Israel"
+      },
       "paths": {
         "0": {
           "lat": "41.1031648529282",
