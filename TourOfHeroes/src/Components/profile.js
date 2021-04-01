@@ -5,9 +5,10 @@ import Boxes from './Boxes';
 const Profile  = ({ route }) => {
 
     const story = route.params;
+
     return(
         <View style ={styles.container}>
-            <Header storyId={story.story.id} />           
+            <Header storyId={story.story.id}/>           
             <Boxes story={story.story.text} />
         </View>
     );

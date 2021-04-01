@@ -2,6 +2,7 @@
   "stories":[
     {
         "storyId": "1",
+        "imageUrl": "https://www.yadvashem.org/sites/default/files/styles/main_image/public/saadia-bahat.jpg?itok=zq0WgJSv",
         "profileProperties": {
           "first_name": "שמואל",
           "last_name": "בריזלי",
@@ -33,6 +34,7 @@
       },
       {
         "storyId": "2",
+        "imageUrl": "https://www.yadvashem.org/sites/default/files/styles/main_image/public/eliaz.jpg?itok=ihPepseO",
         "profileProperties": {
           "first_name": "יהודית",
           "last_name": "פרולינגר",
@@ -64,6 +66,7 @@
       },
       {
         "storyId": "3",
+        "imageUrl": "https://a7.org/pictures/730/730013.jpg",
         "profileProperties": {
           "first_name": "שלום",
           "last_name": "סקופס-לייב",
@@ -95,6 +98,7 @@
       },
       {
         "storyId": "4",
+        "imageUrl": "https://www.yadvashem.org/sites/default/files/styles/main_image/public/saadia-bahat.jpg?itok=zq0WgJSv",
         "profileProperties": {
           "first_name": "משה",
           "last_name": "אשר",
@@ -126,6 +130,7 @@
       },
       {
         "storyId": "5",
+        "imageUrl": "https://www.yadvashem.org/sites/default/files/styles/main_image/public/saadia-bahat.jpg?itok=zq0WgJSv",
         "profileProperties": {
           "first_name": "אריה",
           "last_name": "קבילי",

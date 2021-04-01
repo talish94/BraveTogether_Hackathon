@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import Marker from 'react-native-maps';
+import {Marker} from 'react-native-maps';
 import { Searchbar } from 'react-native-paper';
 const axios = require('axios').default;
 import base64 from 'react-native-base64';
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 400,
-        height: 100,
+        height: 105,
     },
     searchBar: {
         width: 400,
