@@ -9,19 +9,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import {Card, ListItem, Body, Icon, CardItem} from 'react-native-elements';
-
 import * as data from './user.json';
-
-const list = [
-  {
-    name: 'Saadia Bahat',
-    avatar_url:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-    birthYear: '1928',
-    birthAt: 'Alitos in Lithuania',
-    age: 93,
-  },
-];
 
 export default class Header extends React.Component {
   constructor(props){
@@ -29,7 +17,10 @@ export default class Header extends React.Component {
   }
 
   render() {
-    const foundUser = data.stories.find(story => story.storyId == this.props.storyId);
+
+    const storyId = this.props.storyId;
+    const foundUser = data.stories.find(story => story.storyId == storyId);
+
     return (
       <View style={styles.header}>
         <View style={{marginLeft: 110, backgroundColor: 'blue'}}>
@@ -54,7 +45,7 @@ export default class Header extends React.Component {
           style={styles.survivalPic}
           source={{
             uri:
-              'https://www.yadvashem.org/sites/default/files/styles/main_image/public/saadia-bahat.jpg?itok=zq0WgJSv',
+            foundUser.imageUrl,
           }}
         />
       </View>

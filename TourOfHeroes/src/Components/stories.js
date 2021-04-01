@@ -44,9 +44,8 @@ const Stories  = () => {
                     screen: 'Profile',
                     params: { story: l },
                   })}}>
-                    <ListItem.Content>
-                    <ListItem.Title>{l.title}</ListItem.Title>
-                    {/* <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle> */}
+                    <ListItem.Content style={styles.title}>
+                    <ListItem.Title style={styles.title}>{l.title}</ListItem.Title>
                     </ListItem.Content>
                 </ListItem>
                 ))
@@ -60,6 +59,9 @@ const styles = StyleSheet.create({
         width: 400,
         height: 80,
     },
+    title: {
+        justifyContent: "flex-end",alignItems: "flex-end" 
+    }
    });
 
 export default Stories;

@@ -13,8 +13,8 @@ import MapView, {
   Polygon,
   Polyline,
   LatLng,
-  Marker,
 } from 'react-native-maps';
+import { Marker } from 'react-native-maps';
 import * as data from './user.json';
 
 
@@ -25,7 +25,7 @@ export default class Boxes extends React.Component {
 
 
   render() {
-
+    
     const story = data.stories[0];
 
     return (
