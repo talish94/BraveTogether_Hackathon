@@ -1,4 +1,4 @@
-# React_Native_Projects
+# Brave Together Hackathon
 
 
 ![גמר האקתון](https://user-images.githubusercontent.com/49098945/114179885-3b81f600-9948-11eb-8fb0-128d5178f64b.jpeg)
